@@ -1,0 +1,8 @@
+# Sensitive files
+*.token
+TOOLS.md
+.confluence-token
+
+# Runtime state
+MEMORY.md
+memory/
