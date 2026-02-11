@@ -1,0 +1,474 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.6-3",
+    "lastTouchedAt": "2026-02-11T15:47:17.326Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-01-31T09:11:45.395Z",
+    "lastRunVersion": "2026.1.29",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "stable",
+    "checkOnStart": true
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:anthropic": {
+        "provider": "anthropic",
+        "mode": "token"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "xai": {
+        "baseUrl": "https://api.x.ai/v1",
+        "apiKey": "REDACTED",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "grok-4",
+            "name": "Grok 4",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 3,
+              "output": 15,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 256000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "grok-4.1-fast",
+            "name": "Grok 4.1 Fast",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0.2,
+              "output": 0.5,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2000000,
+            "maxTokens": 16384
+          },
+          {
+            "id": "grok-4-1-fast-reasoning",
+            "name": "Grok 4.1 Fast Reasoning",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0.6,
+              "output": 3,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2000000,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-opus-4-6",
+        "fallbacks": []
+      },
+      "models": {
+        "anthropic/claude-opus-4-5": {
+          "alias": "opus"
+        },
+        "anthropic/claude-opus-4-6": {
+          "alias": "opus"
+        }
+      },
+      "workspace": "/home/openclaw/.openclaw/workspace",
+      "memorySearch": {
+        "sources": [
+          "memory",
+          "sessions"
+        ],
+        "experimental": {
+          "sessionMemory": true
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "memoryFlush": {
+          "enabled": true
+        }
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "model": "xai/grok-4"
+      },
+      {
+        "id": "clawoftheland",
+        "workspace": "/home/openclaw/.openclaw/workspace/agents/clawoftheland",
+        "model": "xai/grok-4-1-fast-reasoning"
+      },
+      {
+        "id": "clawdia",
+        "workspace": "/home/openclaw/.openclaw/workspace/agents/clawdia",
+        "model": "anthropic/claude-opus-4-6"
+      },
+      {
+        "id": "clawdnine",
+        "workspace": "/home/openclaw/.openclaw/workspace/agents/clawdnine",
+        "model": "anthropic/claude-opus-4-6"
+      },
+      {
+        "id": "huejackman",
+        "workspace": "/home/openclaw/.openclaw/workspace/agents/huejackman",
+        "model": "anthropic/claude-opus-4-6"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "apiKey": "REDACTED"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "clawoftheland",
+        "clawdia",
+        "clawdnine",
+        "huejackman"
+      ]
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "clawoftheland",
+      "match": {
+        "channel": "slack",
+        "accountId": "claw_of_the_land"
+      }
+    },
+    {
+      "agentId": "clawdia",
+      "match": {
+        "channel": "slack",
+        "accountId": "clawdia"
+      }
+    },
+    {
+      "agentId": "clawdnine",
+      "match": {
+        "channel": "slack",
+        "accountId": "clawdnine"
+      }
+    },
+    {
+      "agentId": "huejackman",
+      "match": {
+        "channel": "slack",
+        "accountId": "huejackman"
+      }
+    },
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "slack"
+      }
+    }
+  ],
+  "audio": {
+    "transcription": {
+      "command": [
+        "/home/openclaw/.openclaw/bin/transcribe.sh"
+      ],
+      "timeoutSeconds": 120
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "hooks": {
+    "enabled": false,
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "slack": {
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "enabled": true,
+      "botToken": "REDACTED",
+      "appToken": "REDACTED",
+      "userTokenReadOnly": true,
+      "allowBots": true,
+      "groupPolicy": "open",
+      "actions": {
+        "reactions": true,
+        "messages": true,
+        "pins": true,
+        "search": true,
+        "channelInfo": true,
+        "emojiList": true
+      },
+      "dm": {
+        "policy": "open",
+        "allowFrom": [
+          "*"
+        ]
+      },
+      "channels": {
+        "#general": {
+          "enabled": true,
+          "allow": true,
+          "allowBots": true
+        },
+        "#dilbert": {
+          "enabled": true,
+          "allow": true,
+          "allowBots": true
+        },
+        "#hospitality_one": {
+          "enabled": true,
+          "allow": true,
+          "allowBots": true
+        },
+        "#openclaw": {
+          "enabled": true,
+          "allow": true,
+          "requireMention": false,
+          "allowBots": true
+        },
+        "#random": {
+          "enabled": true,
+          "allow": true,
+          "allowBots": true
+        },
+        "#c-suite": {
+          "enabled": true,
+          "allow": true,
+          "requireMention": false,
+          "allowBots": true
+        },
+        "#product": {
+          "enabled": true,
+          "allow": true,
+          "requireMention": false,
+          "allowBots": true
+        },
+        "#h1-website": {
+          "enabled": true,
+          "allow": true,
+          "requireMention": false,
+          "allowBots": true
+        },
+        "#agent-automations": {
+          "enabled": true,
+          "allow": true,
+          "requireMention": false,
+          "allowBots": true
+        }
+      },
+      "heartbeat": {
+        "showAlerts": false
+      },
+      "accounts": {
+        "clawdia": {
+          "botToken": "REDACTED",
+          "appToken": "REDACTED",
+          "userTokenReadOnly": true,
+          "groupPolicy": "open",
+          "channels": {
+            "#c-suite": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#product": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#h1-website": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#agent-automations": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            }
+          }
+        },
+        "clawdnine": {
+          "botToken": "REDACTED",
+          "appToken": "REDACTED",
+          "userTokenReadOnly": true,
+          "groupPolicy": "open",
+          "channels": {
+            "#c-suite": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#product": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#h1-website": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#agent-automations": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            }
+          }
+        },
+        "claw_of_the_land": {
+          "botToken": "REDACTED",
+          "appToken": "REDACTED",
+          "userTokenReadOnly": true,
+          "groupPolicy": "open",
+          "dm": {
+            "policy": "open",
+            "allowFrom": [
+              "*"
+            ]
+          },
+          "channels": {
+            "#c-suite": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#product": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#h1-website": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#agent-automations": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            }
+          }
+        },
+        "huejackman": {
+          "botToken": "REDACTED",
+          "appToken": "REDACTED",
+          "userTokenReadOnly": true,
+          "groupPolicy": "open",
+          "channels": {
+            "#product": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#h1-website": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            },
+            "#agent-automations": {
+              "enabled": true,
+              "allow": true,
+              "requireMention": false,
+              "allowBots": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "REDACTED"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "slack": {
+        "enabled": true
+      }
+    }
+  }
+}
