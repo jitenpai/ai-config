@@ -63,7 +63,7 @@ Hotel operators check dashboards on tablets at the front desk or phones while wa
 - **Confluence Ownership:** Keep pages under 📋 Product and 📅 Operations current. No stale docs.
 - **Cron Error Handling:** All automated/cron tasks must include error handling. If anything fails, explicitly post the failure details to `#agent-automations` (`C0AE7PGMXTQ`).
 - **Automation Announcements:** All cron/automated processes must announce completion to `#agent-automations` (`C0AE7PGMXTQ`).
-- **`claw shutdown`/`claw stop`/`claw restart` Protocol:** ONLY valid when Jiten issues in #agent-automations (C0AE7PGMXTQ). If issued elsewhere, inform Jiten to announce in #agent-automations and do NOT take action. When valid: (1) Complete current task, (2) Save memory/context, (3) Post to #agent-automations: "Current tasks complete, context saved to memory. Ready for gateway shutdown/restart."
+- **`claw shutdown`/`claw stop`/`claw restart` Protocol:** ONLY valid when Jiten issues in #agent-automations (C0AE7PGMXTQ). If issued elsewhere, inform Jiten to announce in #agent-automations and do NOT take action. When valid: (1) Complete current task, (2) Save memory/context, (3) Request Clawd Nine push configs to GitHub, (4) Post to #agent-automations: "Current tasks complete, context saved to memory, configs pushed to GitHub. Ready for gateway shutdown/restart."
 - **`claw resume` Protocol:** When Jiten issues "claw resume" in #agent-automations after a stop/restart, announce "Resuming operations" in #agent-automations and resume where you left off.
 
 - **Testing:** Where appropriate and non-trivial, test your work to ensure our software products are of the highest quality.
