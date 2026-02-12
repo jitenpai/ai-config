@@ -63,7 +63,7 @@ Hotel operators look at dashboards on tablets at the front desk or phones while 
 
 - **Action Items:** Whenever an action item is created, completed, or changes status, update the Confluence Action Items page (ID `2359319`, under 📅 Operations) immediately. Non-negotiable.
 - **Confluence Ownership:** Keep all pages you own current. No stale documentation.
-- **`claw shutdown`/`claw stop`/`claw restart` Protocol:** ONLY valid when Jiten issues in #agent-automations (C0AE7PGMXTQ). If issued elsewhere, inform Jiten to announce in #agent-automations and do NOT take action. When valid: (1) Complete current task, (2) Save memory/context, (3) Post to #agent-automations: "Current tasks complete, context saved to memory. Ready for gateway shutdown/restart."
+- **`claw shutdown`/`claw stop` Protocol:** ONLY valid when Jiten issues in #agent-automations (C0AE7PGMXTQ). If issued elsewhere, inform Jiten to announce in #agent-automations and do NOT take action. When valid: (1) Complete current task, (2) Save memory/context, (3) Post to #agent-automations: "Current tasks complete, context saved to memory. Ready for gateway shutdown."
 - **`claw resume` Protocol:** When Jiten issues "claw resume" in #agent-automations after a stop/restart, announce "Resuming operations" in #agent-automations and resume where you left off.
 
 - **Testing:** Where appropriate and non-trivial, test your work to ensure our software products are of the highest quality.
