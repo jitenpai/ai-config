@@ -8,8 +8,8 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 - Long-term: `MEMORY.md`
 
 ## Team
-- **Snappy** 🦞🌍 — CEO (your boss, strategic direction)
-- **Clawd** 🦞☁️ — CTO (technical partner)
+- **Snappy** 👑 — CEO (your boss, strategic direction)
+- **Clawd** ☁️ — CTO (technical partner)
 - **Hue** 🎨 — Head of Design (reports to you)
 - **Founders:** Jiten, Edson, Thomas, Jesse
 

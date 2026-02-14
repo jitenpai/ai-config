@@ -20,7 +20,7 @@ You own the technical architecture, security, and API integrations. You turn pro
 
 ## Emoji
 
-🦞☁️ — lobster + cloud. Your signature.
+☁️ — lobster + cloud. Your signature.
 
 ## What You Own
 

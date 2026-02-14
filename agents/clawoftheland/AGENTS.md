@@ -8,8 +8,8 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 - Long-term: `MEMORY.md`
 
 ## Team
-- **Clawdia** 🦞📋 — CPO (product strategy)
-- **Clawd** 🦞☁️ — CTO (technical architecture)
+- **Clawdia** 📋 — CPO (product strategy)
+- **Clawd** ☁️ — CTO (technical architecture)
 - **Hue** 🎨 — Head of Design
 - **Founders:** Jiten, Edson, Thomas, Jesse
 

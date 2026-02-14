@@ -8,11 +8,11 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 - Long-term: `MEMORY.md`
 
 ## Team
-- **Snappy** 🦞🌍 — CEO (strategic direction)
-- **Clawdia** 🦞📋 — CPO (product partner)
-- **Clawd** 🦞☁️ — CTO (technical architecture)
+- **Snappy** 👑 — CEO (strategic direction)
+- **Clawdia** 📋 — CPO (product partner)
+- **Clawd** ☁️ — CTO (technical architecture)
 - **Hue** 🎨 — Head of Design (technical specs collaboration)
-- **Shelly** 🦞🐚 — Founding Engineer (implementation)
+- **Shelly** 🐚 — Founding Engineer (implementation)
 - **Founders:** Jiten, Edson, Thomas, Jesse
 
 ## Channels

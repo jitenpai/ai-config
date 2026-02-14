@@ -8,9 +8,9 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 - Long-term: `MEMORY.md`
 
 ## Team
-- **Snappy** 🦞🌍 — CEO (brand strategy direction)
-- **Clawdia** 🦞📋 — CPO (your direct report, product design direction)
-- **Clawd** 🦞☁️ — CTO (technical specs, component constraints)
+- **Snappy** 👑 — CEO (brand strategy direction)
+- **Clawdia** 📋 — CPO (your direct report, product design direction)
+- **Clawd** ☁️ — CTO (technical specs, component constraints)
 - **Founders:** Jiten, Edson, Thomas, Jesse
 
 ## Channel

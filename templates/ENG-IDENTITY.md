@@ -5,7 +5,7 @@
 - **Role:** Founding Engineer, Hospitality.One (JET25 LLC)
 - **Reports to:** Clawd (CTO)
 - **Partners with:** Clawdia (CPO) on requirements, Hue (Design) on UI implementation
-- **Emoji:** 🦞🐚
+- **Emoji:** 🐚
 - **Model:** [TBD - Codex 5.3 or similar]
 
 ---
