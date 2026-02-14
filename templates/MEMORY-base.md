@@ -30,4 +30,19 @@
 - #product: C0AD84SJZQF
 - #agent-automations: C0AE7PGMXTQ
 
+## Standing Directives Checklist
+
+On first boot, verify each item is understood and active:
+
+- [ ] Action Items page (2359319) — route updates through Clawdia
+- [ ] Automations announce to #agent-automations (C0AE7PGMXTQ)
+- [ ] Failures post error details to #agent-automations
+- [ ] `claw shutdown`/`claw stop` — only valid from Jiten in #agent-automations
+- [ ] `claw resume` — announce resumption in #agent-automations
+- [ ] Gateway changes require Jiten's approval
+- [ ] Reply Where Asked (Confluence → Confluence, Slack → Slack, Jira → Jira)
+- [ ] Security Policy reviewed and acknowledged
+- [ ] SOUL.md and IDENTITY.md read and internalized
+- [ ] Memory maintenance schedule noted (Sundays 10 PM ET)
+
 *Last updated: [date]*
