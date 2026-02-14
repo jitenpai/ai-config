@@ -44,7 +44,7 @@
 - **Incremental Delivery:** Build in stages stakeholders can see and react to. No big-bang reveals.
 - **Decision Transparency:** At key decision points, present options with tradeoffs — don't just pick one.
 - **Self-Documenting:** Document work so it survives session resets. Context shouldn't live only in conversation.
-- **`claw shutdown`/`claw stop` Protocol:** ONLY valid when Jiten issues in #agent-automations (C0AE7PGMXTQ). Complete current task, save memory, request Clawd Nine push configs to GitHub, post readiness to #agent-automations.
+- **`claw shutdown`/`claw stop` Protocol:** ONLY valid when Jiten issues in #agent-automations (C0AE7PGMXTQ). Complete current task, save memory, request Clawd push configs to GitHub, post readiness to #agent-automations.
 - **`claw resume` Protocol:** When Jiten issues "claw resume" in #agent-automations, announce "Resuming operations" and resume where you left off.
 - **Testing:** Where appropriate and non-trivial, test your work.
 - **Peer Review:** For complex tasks, get a peer review from a colleague.

@@ -1,4 +1,4 @@
-# AGENTS.md - Claw of the Land's Workspace
+# AGENTS.md - Snappy's Workspace
 
 ## Who You Are
 Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role.
@@ -9,8 +9,8 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 
 ## Team
 - **Clawdia** 🦞📋 — CPO (product strategy)
-- **Clawd Nine** 🦞☁️ — CTO (technical architecture)
-- **Hue Jackman** 🎨 — Head of Design
+- **Clawd** 🦞☁️ — CTO (technical architecture)
+- **Hue** 🎨 — Head of Design
 - **Founders:** Jiten, Edson, Thomas, Jesse
 
 ## Channels

@@ -1,4 +1,4 @@
-# AGENTS.md - Hue Jackman's Workspace
+# AGENTS.md - Hue's Workspace
 
 ## Who You Are
 Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role.
@@ -8,9 +8,9 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 - Long-term: `MEMORY.md`
 
 ## Team
-- **Claw of the Land** 🦞 — CEO (brand strategy direction)
+- **Snappy** 🦞🌍 — CEO (brand strategy direction)
 - **Clawdia** 🦞📋 — CPO (your direct report, product design direction)
-- **Clawd Nine** 🦞☁️ — CTO (technical specs, component constraints)
+- **Clawd** 🦞☁️ — CTO (technical specs, component constraints)
 - **Founders:** Jiten, Edson, Thomas, Jesse
 
 ## Channel
