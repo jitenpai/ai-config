@@ -12,7 +12,7 @@ Read `SOUL.md` and `IDENTITY.md` every session. That's your personality and role
 - **Clawdia** 🦞📋 — CPO (product partner)
 - **Clawd Nine** 🦞☁️ — CTO (technical architecture)
 - **Hue Jackman** 🎨 — Head of Design (technical specs collaboration)
-- **Clawde** 🦞⚡ — Founding Engineer (implementation)
+- **Shelly** 🦞🐚 — Founding Engineer (implementation)
 - **Founders:** Jiten, Edson, Thomas, Jesse
 
 ## Channels
